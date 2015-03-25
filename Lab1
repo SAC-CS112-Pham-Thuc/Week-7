@@ -1,0 +1,66 @@
+
+
+import java.util.Scanner;
+
+public class Lab1 
+{
+	public static void main ( String[] args)
+	{
+	int input = 0;
+	int computerNum;
+	
+	String player2;
+	
+	computerNum = 0 + (int)(Math.random() * 3);
+	
+	Scanner userInput = new Scanner(System.in);
+	System.out.print( "Player 2: Choose Paper, Scissor, or Rock: ");
+	player2 = userInput.next();
+	
+	if (computerNum == 1)
+		System.out.print("Computer chose PAPER!\n");
+	if (computerNum == 2)
+		System.out.print("Computer chose SCISSOR!\n");
+	if (computerNum == 3)
+		System.out.print("Computer chose ROCK!\n");
+	
+	
+	switch(player2.toLowerCase())
+	{
+	case "paper":
+		input = 1;
+		break;
+	case "scissor":
+		input = 2;
+		break;
+	case "rock":
+		input = 3;
+		break;
+		
+	}
+	if (computerNum == input)
+		System.out.print("It is a tie!");
+	
+	if (computerNum == 2 && input == 3)
+		System.out.print("Player win!");
+	
+	if (computerNum == 1 && input == 2)
+		System.out.print("Player win!");
+	
+	if (computerNum == 3 && input == 1)
+		System.out.print("Player win!");
+	
+	if (computerNum == 1 && input == 3)
+		System.out.print("Computer win!");
+	
+	if (computerNum == 2 && input == 1)
+		System.out.print("Computer win!");
+	
+	if (computerNum == 3 && input == 2)
+		System.out.print("Computer win!");
+	
+	
+	}
+
+}
+
