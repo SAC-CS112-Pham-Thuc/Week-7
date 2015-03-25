@@ -1,0 +1,62 @@
+
+
+import java.util.Scanner;
+
+public class Lab1Retry
+{
+	public static void main ( String[] args)
+	{
+	int input = 0;
+	int computerNum;
+	String computerChoice = null;
+	String player;
+	
+	computerNum = 0 + (int)(Math.random() * 3);
+	
+	
+	
+	Scanner userInput = new Scanner(System.in);
+	System.out.print( "Player 2: Choose Paper, Scissor, or Rock: ");
+	player = userInput.next();
+	
+	switch(computerNum)
+	{
+	case 1: {
+		computerChoice = "Paper";
+		switch(player.toLowerCase())
+		{
+		case "paper": System.out.print("It's a tie!\n"); break;
+		case "scissor": System.out.print("Payer Win!\n"); break;
+		case "rock": System.out.print("Computer Win!\n"); break;
+		}
+		System.out.print("Compter Chose PAPER!");
+		}
+		break;
+	case 2: {
+		computerChoice = "Scissor";
+		switch(player.toLowerCase())
+		{
+		case "paper": System.out.print("Computer Win!\n"); break;
+		case "scissor": System.out.print("It's a Tie!\n"); break;
+		case "rock": System.out.print("Payer Win!\n"); break;
+		}
+		System.out.print("Compter Chose SCISSOR!");
+		}
+		break;
+	case 3: {
+		computerChoice = "Rock";
+		switch(player.toLowerCase())
+		{
+		case "paper": System.out.print("Player Win!\n"); break;
+		case "scissor": System.out.print("computer Win!\n"); break;
+		case "rock": System.out.print("It's a Tie!\n"); break;
+		}
+		System.out.print("Compter Chose ROCK!");
+		}
+		break;
+	}
+		return;
+	}
+
+}
+
